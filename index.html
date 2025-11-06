@@ -127,6 +127,32 @@
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+        .clickable-image {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .clickable-image:hover {
+            transform: scale(1.02);
+        }
     </style>
 </head>
 <body class="p-4 sm:p-8">
@@ -162,6 +188,18 @@
             </button>
         </div>
 
+        <!-- Κουμπί Κεντρικής Σελίδας -->
+        <footer class="text-center mt-8 pt-4 border-t border-amber-300">
+            <a href="https://conchr.github.io/Farsala-Center-Page/" class="btn-custom bg-amber-600 text-white font-semibold py-3 px-6 rounded-full inline-flex items-center">
+                <i class="fas fa-home mr-2"></i> Κεντρική Σελίδα
+            </a>
+        </footer>
+
+    </div>
+
+    <!-- Modal για εικόνες -->
+    <div id="imageModal" class="modal">
+        <img id="modalImage" src="" alt="Εικόνα σε πλήρες μέγεθος">
     </div>
 
     <script>
@@ -175,11 +213,9 @@
                             <p class="text-amber-800 leading-relaxed mb-4">
                                 Τα Φάρσαλα κατοικούνται σήμερα από έναν <span class="font-bold text-amber-900">μείκτη πληθυσμό</span> με διάφορες ιστορικές καταβολές. Οι ομάδες αυτές δεν αποτελούν "φυλές", αλλά <span class="font-bold text-amber-900">ενδο-ελλαδικές εθνοτοπικές ομάδες</span> ή πολιτισμικές ομάδες που συνέβαλαν στη διαμόρφωση της περιοχής.
                             </p>
-                            <div class="map-container mt-4 relative">
-                                <div class="map-point" style="top: 50%; left: 50%;"></div>
-                                <div class="absolute bottom-4 left-4 bg-amber-100 bg-opacity-90 px-3 py-2 rounded-lg shadow">
-                                    <p class="text-sm font-semibold text-amber-900">Φάρσαλα, Θεσσαλία</p>
-                                </div>
+                            <div class="text-center mt-4">
+                                <img src="https://raw.githubusercontent.com/conchr/Nationalities-Farsala/main/%CE%A6%CE%B1%CF%81%CF%83%CE%B1%CE%BB%CE%B1.jpg" alt="Φάρσαλα" class="clickable-image w-full max-w-md mx-auto rounded-lg shadow-md cursor-pointer">
+                                <p class="text-sm text-amber-600 mt-2">Κάντε κλικ στην εικόνα για μεγέθυνση</p>
                             </div>
                         </div>
                         <div class="flex-1">
@@ -277,7 +313,11 @@
                                 <p class="text-amber-700 mb-4">
                                     Οι Καραγκούνηδες ζούσαν σε μικρές αγροτικές κοινότητες, ασχολούμενοι κυρίως με τη καλλιέργεια σιτηρών και βαμβακιού, καθώς και με την κτηνοτροφία για τις οικιακές ανάγκες.
                                 </p>
-                                <div class="p-3 bg-amber-50 rounded-lg border border-amber-200">
+                                <div class="text-center mt-4">
+                                    <img src="https://raw.githubusercontent.com/conchr/Nationalities-Farsala/main/%CE%9A%CE%B1%CF%81%CE%B1%CE%B3%CE%BA%CE%BF%CF%8D%CE%BD%CE%B7%CF%821.jpg" alt="Καραγκούνηδες" class="clickable-image w-48 mx-auto rounded-lg shadow-md cursor-pointer">
+                                    <p class="text-sm text-amber-600 mt-2">Κάντε κλικ στην εικόνα για μεγέθυνση</p>
+                                </div>
+                                <div class="p-3 bg-amber-50 rounded-lg border border-amber-200 mt-4">
                                     <p class="text-sm italic text-amber-800">"Οι Καραγκούνηδες αποτελούσαν τη ραχοκοκκαλιά της αγροτικής παραγωγής στη Θεσσαλία."</p>
                                 </div>
                             </div>
@@ -320,6 +360,10 @@
                                         <h5 class="font-bold text-amber-900">Χειμώνας</h5>
                                         <p class="text-sm text-amber-700">Διαχείμαση στους Θεσσαλικούς κάμπους</p>
                                     </div>
+                                </div>
+                                <div class="text-center mt-4">
+                                    <img src="https://raw.githubusercontent.com/conchr/Nationalities-Farsala/main/%CE%9A%CE%B1%CF%81%CE%B1%CE%B3%CE%BA%CE%BF%CF%85%CE%BD%CE%B7%CF%822.jpg" alt="Καραγκούνηδες 2" class="clickable-image w-48 mx-auto rounded-lg shadow-md cursor-pointer">
+                                    <p class="text-sm text-amber-600 mt-2">Κάντε κλικ στην εικόνα για μεγέθυνση</p>
                                 </div>
                             </div>
                         </div>
@@ -367,6 +411,10 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="text-center mt-4">
+                                    <img src="https://raw.githubusercontent.com/conchr/Nationalities-Farsala/main/%CE%A3%CE%B1%CF%81%CE%B1%CE%BA2.jpg" alt="Σαρακατσάνοι" class="clickable-image w-48 mx-auto rounded-lg shadow-md cursor-pointer">
+                                    <p class="text-sm text-amber-600 mt-2">Κάντε κλικ στην εικόνα για μεγέθυνση</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -411,6 +459,10 @@
                                         <p class="font-bold text-amber-900">Βλάχικα</p>
                                         <p>Βάκα</p>
                                     </div>
+                                </div>
+                                <div class="text-center mt-4">
+                                    <img src="https://raw.githubusercontent.com/conchr/Nationalities-Farsala/main/%CE%92%CE%BB%CE%B1%CF%87%CE%BF%CE%B91.jpg" alt="Βλάχοι 1" class="clickable-image w-48 mx-auto rounded-lg shadow-md cursor-pointer">
+                                    <p class="text-sm text-amber-600 mt-2">Κάντε κλικ στην εικόνα για μεγέθυνση</p>
                                 </div>
                             </div>
                         </div>
@@ -465,6 +517,10 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="text-center mt-4">
+                                    <img src="https://raw.githubusercontent.com/conchr/Nationalities-Farsala/main/%CE%92%CE%BB%CE%B1%CF%87%CE%BF%CE%B92.jpg" alt="Βλάχοι 2" class="clickable-image w-48 mx-auto rounded-lg shadow-md cursor-pointer">
+                                    <p class="text-sm text-amber-600 mt-2">Κάντε κλικ στην εικόνα για μεγέθυνση</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -508,6 +564,10 @@
                                         <div class="bg-amber-200 text-amber-900 font-bold py-1 px-3 rounded-l-lg">1930s</div>
                                         <div class="bg-amber-50 py-1 px-3 rounded-r-lg flex-1 border border-amber-300">Ανάπτυξη της καλλιέργειας φακής στα Φάρσαλα</div>
                                     </div>
+                                </div>
+                                <div class="text-center mt-4">
+                                    <img src="https://raw.githubusercontent.com/conchr/Nationalities-Farsala/main/%CE%9C%CE%B9%CE%BA%CF%81%CE%B1%CF%831.jpg" alt="Μικρασιάτες 1" class="clickable-image w-48 mx-auto rounded-lg shadow-md cursor-pointer">
+                                    <p class="text-sm text-amber-600 mt-2">Κάντε κλικ στην εικόνα για μεγέθυνση</p>
                                 </div>
                             </div>
                         </div>
@@ -564,6 +624,10 @@
                                             <p class="text-sm text-amber-700">Αναζήτηση καλύτερων συνθηκών διαβίωσης</p>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="text-center mt-4">
+                                    <img src="https://raw.githubusercontent.com/conchr/Nationalities-Farsala/main/%CE%9C%CE%B9%CE%BA%CF%81%CE%B1%CF%832.jpg" alt="Μικρασιάτες 2" class="clickable-image w-48 mx-auto rounded-lg shadow-md cursor-pointer">
+                                    <p class="text-sm text-amber-600 mt-2">Κάντε κλικ στην εικόνα για μεγέθυνση</p>
                                 </div>
                                 <div class="mt-4 p-3 bg-amber-50 rounded-lg border border-amber-200">
                                     <p class="text-sm italic text-amber-800">"Η εσωτερική μετανάστευση συνέβαλε στην ανάπτυξη των Φαρσάλων ως σημαντικού αστικού κέντρου της περιοχής."</p>
@@ -633,6 +697,8 @@
         const nextBtn = document.getElementById('next-btn');
         const pageCounter = document.getElementById('page-counter');
         const progressFill = document.getElementById('progress-fill');
+        const imageModal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
 
         /**
          * Εμφανίζει την τρέχουσα διαφάνεια.
@@ -653,6 +719,9 @@
             frame.innerHTML = '';
             frame.appendChild(slideElement);
 
+            // Προσθήκη event listeners για clickable images
+            addImageClickListeners();
+
             // Ενημέρωση του μετρητή
             pageCounter.textContent = `Σελίδα ${currentSlideIndex + 1}/${slidesData.length}`;
 
@@ -663,7 +732,31 @@
             // Ενημέρωση των κουμπιών
             prevBtn.disabled = currentSlideIndex === 0;
             nextBtn.disabled = currentSlideIndex === slidesData.length - 1;
+
+            // Scroll to top
+            window.scrollTo(0, 0);
         }
+
+        /**
+         * Προσθέτει event listeners για τις clickable εικόνες
+         */
+        function addImageClickListeners() {
+            const clickableImages = document.querySelectorAll('.clickable-image');
+            clickableImages.forEach(img => {
+                img.addEventListener('click', () => {
+                    modalImage.src = img.src;
+                    modalImage.alt = img.alt;
+                    imageModal.style.display = 'flex';
+                });
+            });
+        }
+
+        /**
+         * Κλείνει το modal όταν γίνεται κλικ σε αυτό
+         */
+        imageModal.addEventListener('click', () => {
+            imageModal.style.display = 'none';
+        });
 
         /**
          * Χειρισμός πλοήγησης προς τα εμπρός.
@@ -695,6 +788,8 @@
                 nextSlide();
             } else if (e.key === 'ArrowLeft') {
                 prevSlide();
+            } else if (e.key === 'Escape') {
+                imageModal.style.display = 'none';
             }
         });
 
